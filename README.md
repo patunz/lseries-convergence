@@ -33,8 +33,9 @@ The coefficient bound holds at every prime, of good or bad reduction. No `sorry`
 - **Novelty not established.** A search of Mathlib, Tau Ceti, and public Lean repositories on
   21 November 2026 found no earlier formal proof of this statement. That is a search, not a proof
   of absence.
-- **Verification.** Built and checked by the author's own tooling on one machine. An independent
-  rebuild with `scripts/build.sh` is welcome.
+- **Verification.** `scripts/build.sh` was run once on a clean machine (21 November 2026) and
+  reproduced the build and the axiom check. Both runs were the author's; an independent rebuild
+  is welcome.
 - **AI assistance.** The Lean code was written with Claude (Anthropic).
 
 ## What is used and what is new
@@ -68,8 +69,8 @@ scripts/build.sh
 
 This clones Tau Ceti at the pinned commit into `_tc/`, registers `LSeriesConv` as a library in
 its `lakefile.toml`, fetches the Mathlib and Tau Ceti caches, builds, and prints the axioms of the
-three theorems. On an 8-vCPU machine: about ten minutes for the caches, a few minutes for the
-first build. Expect roughly 15 GB of disk.
+three theorems. On a clean 8-vCPU machine the whole script took about three minutes, and used
+about 15 GB of disk.
 
 ## License
 
