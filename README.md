@@ -30,9 +30,12 @@ The coefficient bound holds at every prime, of good or bad reduction. No `sorry`
   half-plane, are not proved. `3/2` is not shown to be optimal.
 - **Not house style.** The files do not use the module system, they `import Mathlib` wholesale,
   and their comments and docstrings are in Italian.
-- **Novelty not established.** A search of Mathlib, Tau Ceti, and public Lean repositories on
-  21 November 2026 found no earlier formal proof of this statement. That is a search, not a proof
-  of absence.
+- **Not new.** The same statement is listed as proved on Prove2Me's Formalpedia:
+  [`BSD.lSeriesSummable`](https://prove2.me/theorems/c48ddb62-7c56-4adb-a72f-784fe2342dcf)
+  (8 September 2026, against Mathlib `0df444a`, Lean `v4.33.1`), together with the coefficient
+  bound `|a_{p^k}| ≤ (k + 1) p^{k/2}`. I found it only after writing this, and could not see its
+  proof source, so I cannot compare the two. This repository is an independent proof against
+  Tau Ceti and current Mathlib; I did not find the statement in Tau Ceti or in Mathlib itself.
 - **Verification.** `scripts/build.sh` was run once on a clean machine (21 November 2026) and
   reproduced the build and the axiom check. Both runs were the author's; an independent rebuild
   is welcome.
